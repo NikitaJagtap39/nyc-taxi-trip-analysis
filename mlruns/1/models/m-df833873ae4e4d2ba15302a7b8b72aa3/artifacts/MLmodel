@@ -1,0 +1,23 @@
+artifact_path: /workspaces/nyc-taxi-trip-analysis/mlruns/1/models/m-df833873ae4e4d2ba15302a7b8b72aa3/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.1
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.12.0
+model_id: m-df833873ae4e4d2ba15302a7b8b72aa3
+model_size_bytes: 4300
+model_uuid: m-df833873ae4e4d2ba15302a7b8b72aa3
+prompts: null
+run_id: eaefd2d288f24b2aafd38fb52a9c2cb8
+utc_time_created: '2026-05-17 03:22:03.346685'

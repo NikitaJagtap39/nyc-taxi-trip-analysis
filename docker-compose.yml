@@ -1,0 +1,28 @@
+
+version: '3.7'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+      POSTGRES_USER: postgres
+      POSTGRES_DB: taxi_monitoring
+    ports:
+      - "5432:5432"
+
+  grafana:
+    image: grafana/grafana
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    depends_on:
+      - db
+    volumes:
+      - grafana_data:/var/lib/grafana
+
+volumes:
+  grafana_data:
